@@ -1,0 +1,21 @@
+<%- include("./head.ejs") %>
+
+  <h1>Danh sách sản phẩm</h1>
+  <% products.forEach(product => { %>
+    <div>
+      <h3>Tên sản phẩm: <%= product.title %></h3>
+      <p>Giá sản phẩm: <%= product.cost %></p>
+    </div>
+  <% }) %>
+  <!-- <% var a = 6 %> -->
+  <!-- <% if(a > 3) { %>
+    <p style="color: red">số <%= a %></p> 
+  <% } else { %>
+    <p style="color: red">số nhỏ hơn 3</p>
+  <% } %>
+  <%- include("./taga.ejs") %> -->
+
+  <!-- <% %> -->
+  <!-- <%-  %> -->
+  <!-- <%=  %> -->
+<%- include("./end.ejs") %>
