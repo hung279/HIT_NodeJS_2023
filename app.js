@@ -2,15 +2,20 @@ const express = require('express')
 const path = require('path');
 const app = express()
 const port = 3000
-const router = require('./router/router');
+const productRouter = require('./router/product.route');
 //compile view engine
+
+// app.use(express.urlencoded()); // form -> urlencoded url
+app.use(express.json()); // json -> json
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 
 // console.log(path.join(__dirname, 'views'));
 
 
-app.use('/views', router);
+app.use('/api/products', productRouter);
 
 // app -> "/view" -> router -> 
 
